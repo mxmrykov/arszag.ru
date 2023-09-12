@@ -1,0 +1,21 @@
+.App .our__location {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 95%;
+}
+.App .our__location .iframe__main {
+  max-width: 100%;
+}
+.App .our__location .iframe__main .iframe {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=contacts.css.map */

@@ -1,0 +1,75 @@
+.App .top__logo {
+  font-size: 3.5rem;
+  padding: 50px;
+  width: 500px;
+  margin: 0 auto;
+  user-select: none;
+  cursor: pointer;
+}
+.App .top__logo .article_t {
+  font-family: Facon;
+  letter-spacing: 5px;
+  font-size: 5.5rem;
+}
+.App .first_tirechange_block {
+  width: 1300px;
+  max-width: 95%;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 50px auto;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 0;
+}
+.App .second_tirechange_block {
+  width: 1300px;
+  max-width: 95%;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 50px auto;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 25px;
+  height: auto;
+}
+.App .third_tirechange_block {
+  width: 1300px;
+  max-width: 95%;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 50px auto;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 0;
+}
+.App .img__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 450px) {
+  .bt {
+    font-size: 1.5rem !important;
+  }
+
+  .first_tirechange_block {
+    padding: 10px;
+  }
+
+  .mt {
+    font-size: 1.1rem !important;
+  }
+
+  .img__box {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 0;
+  }
+  .img__box img {
+    width: 300px !important;
+    height: 300px !important;
+    margin-top: 15px;
+  }
+}
+
+/*# sourceMappingURL=tirechange.css.map */

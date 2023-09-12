@@ -1,0 +1,501 @@
+.App .bt {
+  font-size: 2.5rem;
+}
+
+.App .top__logo {
+  font-size: 3.5rem;
+  padding: 50px;
+  width: 500px;
+  margin: 0 auto;
+  user-select: none;
+  cursor: pointer;
+}
+
+.App .top__logo .article_t {
+  font-family: Facon;
+  letter-spacing: 5px;
+  font-size: 5.5rem;
+}
+
+.App .call__block {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 550px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  user-select: none;
+  border-radius: 10px;
+  border: 3px solid white;
+  max-width: 90%;
+  cursor: pointer;
+  margin-top: 50px;
+  transition: 0.2s ease;
+}
+
+.App .call__block .phoneLogo {
+  width: 55px;
+}
+
+.App .call__block .phoneText {
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding: 0;
+  margin: 0;
+}
+
+.App .call__block:hover {
+  transform: translateY(-7px);
+  background-color: black;
+}
+
+.App .top__services_block {
+  width: 750px;
+  flex-wrap: wrap;
+  max-width: 95%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.button_m {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 7px 12px;
+  font-size: 1.0rem;
+  border-radius: 10px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.button_m:hover {
+  transform: translateY(-3px);
+}
+
+.App .top__services_block .services__card {
+  color: white;
+  background-image: url("../img/chb_contacts.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  width: 350px;
+  height: 350px;
+  max-width: 45%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-radius: 10px;
+}
+
+.App .top__services_block .services__card:hover {
+  background-image: url("../img/contrast_contacts.jpeg");
+}
+
+.App .top__services_block .bottom_price_card {
+  background-image: url("../img/chb_price.jpeg");
+}
+
+.App .top__services_block .bottom_price_card:hover {
+  background-image: url("../img/contrast_price.jpeg");
+}
+
+.App .top__services_block .tires__card {
+  color: white;
+  background-image: url("../img/chb_buytire.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  width: 350px;
+  height: 350px;
+  max-width: 45%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-radius: 10px;
+}
+
+.w-700 {
+  background-image: url("../img/osago_chb.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  width: 350px;
+  height: 350px;
+  max-width: 45%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-radius: 10px;
+}
+
+.App .top__services_block .tires__card:hover {
+  background-image: url("../img/contrast_buytire.jpeg");
+}
+
+.App .top__services_block .bottom_contacts_card {
+  background-image: url("../img/chb_gallery.jpeg");
+}
+
+.App .top__services_block .bottom_contacts_card:hover {
+  background-image: url("../img/contrast_gallery.jpeg");
+}
+
+.App .top__services_block .cards_h1 {
+  font-size: 2.3rem;
+  font-family: Facon;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: 0.2s ease;
+}
+
+.App .top__services_block .card:hover {
+  background-size: 145%;
+}
+
+.App .top__services_block .card:hover .cards_h1 {
+  letter-spacing: 2px !important;
+}
+
+.App .navigation {
+  margin: 50px auto;
+  width: 900px;
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App .navigation ul {
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+}
+
+.App .navigation .service__block {
+  color: white;
+  font-family: Copperplate;
+  font-size: 4.5rem;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px;
+  padding: 25px;
+  transition: 0.2s ease;
+  border-radius: 20px;
+  border: 4px solid white;
+  cursor: pointer;
+}
+
+.App .navigation .service__logo {
+  width: 90px;
+
+}
+
+.preview_card {
+  background-image: url("../img/preview.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  height: 350px;
+  max-width: 90%;
+  width: 700px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-radius: 10px;
+}
+
+.preview_card:hover {
+  background-size: 115% !important;
+}
+
+.App .navigation ul li:hover {
+  transform: translateY(-8px);
+  background-color: black;
+}
+
+.w-700:hover {
+  background-image: url("../img/osago.jpeg");
+  background-size: 105% !important;
+}
+
+.gift__card {
+  background-image: url("../img/gift_c_black.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  width: 350px;
+  height: 350px;
+  max-width: 45%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-radius: 10px;
+}
+
+.gift__card:hover {
+  background-image: url("../img/gift_c.jpeg");
+  background-size: 109% !important;
+}
+
+.window_main_ {
+  width: 600px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+@media screen and (max-width: 1008px) {
+  .pasting_home_block p {
+    font-size: 3.8rem;
+  }
+}
+
+@media screen and (max-width: 874px) {
+  .pasting_home_block p {
+    font-size: 3.4rem;
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .pasting_home_block p {
+    font-size: 2.9rem;
+  }
+}
+
+@media screen and (max-width: 681px) {
+  .pasting_home_block p {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 603px) {
+  .pasting_home_block p {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (max-width: 529px) {
+  .pasting_home_block p {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .pasting_home_block p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 427px) {
+  .pasting_home_block p {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .top__logo {
+    font-size: 2.5rem !important;
+  }
+
+  .top__logo .article_t {
+    font-size: 4.5rem !important;
+  }
+
+  .call__block {
+    width: 350px !important;
+  }
+
+  .call__block .phoneText {
+    font-size: 1.4rem !important;
+  }
+
+  .call__block .phoneLogo {
+    width: 35px !important;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .navigation ul li {
+    font-size: 4rem !important;
+    padding: 20px 25px !important;
+  }
+
+  .service__logo {
+    width: 80px !important;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .navigation ul li ul li {
+    font-size: 3.5rem !important;
+    padding: 17px 25px !important;
+    border: 3px solid white !important;
+  }
+
+  .service__logo {
+    width: 70px !important;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .tires__card {
+    border-radius: 10px !important;
+  }
+}
+
+@media screen and (max-width: 733px) {
+  .navigation ul li {
+    font-size: 3rem !important;
+    padding: 14px 25px !important;
+    border: 3px solid white !important;
+  }
+
+  .service__logo {
+    width: 60px !important;
+  }
+}
+
+@media screen and (max-width: 706px) {
+  .top__services_block h1 {
+    font-size: 2rem !important;
+  }
+}
+
+@media screen and (max-width: 659px) {
+  .navigation ul li {
+    font-size: 2.5rem !important;
+    padding: 11px 25px !important;
+    border: 3px solid white !important;
+  }
+
+  .service__logo {
+    width: 50px !important;
+  }
+
+  .top__services_block div {
+    height: 250px !important;
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .navigation ul li {
+    font-size: 2rem;
+    padding: 8px 25px !important;
+    border: 2px solid white !important;
+  }
+
+  .service__logo {
+    width: 50px !important;
+  }
+
+  .top__services_block h1 {
+    font-size: 1.7rem !important;
+  }
+}
+
+@media screen and (max-width: 507px) {
+  .navigation ul li {
+    font-size: 1.6rem !important;
+    padding: 5px 25px !important;
+    border: 2px solid white !important;
+  }
+
+  .service__logo {
+    width: 50px !important;
+  }
+
+  .services__card h1 {
+    font-size: 1.5rem !important;
+  }
+  .gift__card h1 {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media screen and (max-width: 447px) {
+  .services__card h1 {
+    font-size: 1.2rem !important;
+
+  }
+
+  .tires__card h1 {
+    font-size: 1.4rem !important;
+  }
+
+  .w-700 h1 {
+    font-size: 1.2rem !important;
+
+  }
+
+  .gift_card h1 {
+    font-size: 1.0rem !important;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .service__logo {
+    width: 40px !important;
+  }
+
+  .top__services_block div {
+    height: 200px !important;
+    border-radius: 10px !important;
+  }
+
+  .service__logo {
+    margin-right: 15px !important;
+  }
+
+  .cards_h1 {
+    font-size: 1.0rem !important;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .services__card h1 {
+    font-size: 1rem !important;
+  }
+
+  .tires__card h1,
+  .services__card h1 {
+    font-size: 1.4rem !important;
+  }
+
+  .w-700 h1 {
+    font-size: 1.0rem !important;
+
+  }
+
+  .gift__card h1 {
+    font-size: 1.0rem !important;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

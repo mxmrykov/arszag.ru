@@ -1,0 +1,21 @@
+.App .input__invisible {
+  display: none;
+}
+.App .open__gallery_label {
+  cursor: pointer;
+}
+.App .post__image_btn {
+  padding: 10px 10px;
+  font-size: 1.3rem;
+  border: unset;
+  margin: 10px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  background-color: #5349d4;
+  outline: none;
+}
+.App .post__image_btn:hover {
+  background-color: black;
+}
+
+/*# sourceMappingURL=gallery.css.map */
