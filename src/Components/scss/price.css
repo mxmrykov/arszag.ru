@@ -155,9 +155,6 @@ td:last-child {
 
 
 @media screen and (max-width: 440px) {
-  #price-list-shin-table {
-    font-size: 0.2em;
-  }
   .App .pricelist_globalsection {
     max-width: 100%;
   }
