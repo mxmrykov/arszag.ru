@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import NotFound from "./NotFound";
 import keramika from './img/6.png'
@@ -6,14 +6,109 @@ import './scss/price.css'
 import Helmet from "react-helmet";
 import shinomontazh from './img/2.png'
 import Tirechange from "./Tirechange";
-// class PriceType extends React.Component {
-// navigateHome() {
-//     window.location.href = '/';
-// }
-
-// render() {
+import {FaCaretDown} from "react-icons/fa";
 const PriceType = () => {
 
+    const prices = {
+        "R15-17": [
+            "15 000",
+            "9 000",
+            "13 000",
+            "6 000",
+            "8 000",
+            "7 000",
+            "5 000",
+            "1 000",
+            "5 000",
+            "2 500",
+            "2 500",
+            "4 000",
+            "1 000",
+            "9 500"
+        ],
+        "R18-20": [
+            "17 000",
+            "11 000",
+            "15 000",
+            "8 000",
+            "10 000",
+            "9 000",
+            "6 000",
+            "1 000",
+            "5 500",
+            "3 000",
+            "2 500",
+            "4 500",
+            "1 000",
+            "10 000"
+        ],
+        "R21-22": [
+            "20 000",
+            "14 000",
+            "18 000",
+            "11 000",
+            "13 000",
+            "12 000",
+            "6 500",
+            "1 000",
+            "6 500",
+            "4 000",
+            "2 500",
+            "4 500",
+            "1 000",
+            "11 000"
+        ],
+        "R23": [
+            "23 000",
+            "17 000",
+            "21 000",
+            "14 000",
+            "16 000",
+            "15 000",
+            "6 500",
+            "1 000",
+            "7 500",
+            "4 500",
+            "2 500",
+            "5 000",
+            "1 000",
+            "12 000"
+        ],
+        "R24": [
+            "25 000",
+            "17 000",
+            "23 000",
+            "14 000",
+            "16 000",
+            "15 000",
+            "9 000",
+            "1 000",
+            "7 500",
+            "4 500",
+            "2 500",
+            "5 000",
+            "1 000",
+            "12 000"
+        ],
+        "R25-32": [
+            "27 000",
+            "17 000",
+            "25 000",
+            "14 000",
+            "16 000",
+            "15 000",
+            "10 000",
+            "1 000",
+            "7 500",
+            "5 000",
+            "2 500",
+            "5 000",
+            "1 000",
+            "12 000"
+        ]
+    }
+
+    const [priceTiresChange, setPriceTiresChange] = useState("R15-17")
     const {type} = useParams();
 
     function navigateHome() {
@@ -731,21 +826,54 @@ const PriceType = () => {
                     <p className="back_to_menu_text">назад к меню</p>
                 </div>
                 <section className="pricelist_globalsection non_bottomed">
+                    <div
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center"
+                        }}
+                    >
+                        <h5
+                            style={{margin: 0, marginTop: 10}}
+                        >Выбор диаметра: </h5>
+
+                        <select
+                            className={"tirechange-select"}
+                            onChange={e => {
+                                setPriceTiresChange(e.target.value)
+                            }}
+                            style={{margin: 0, marginTop: 10, marginLeft: 20}}
+                        >
+                            <option
+                                value="R15-17">R15-17
+                            </option>
+                            <option
+                                value="R18-20">R18-20
+                            </option>
+                            <option
+                                value="R21-22">R21-22
+                            </option>
+                            <option
+                                value="R23">R23
+                            </option>
+                            <option
+                                value="R24">R24
+                            </option>
+                            <option
+                                value="R25-32">R25-32
+                            </option>
+                        </select>
+                        <FaCaretDown style={{position: "relative", left: -26, top: 2}} size={15} color={"white"}/>
+                    </div>
                     <h1 id="price-list-shin" className="bt border__bottom_white">Шиномонтаж</h1>
                     <table id="price-list-shin-table">
                         <thead>
                         <tr>
-                            <td rowSpan="2" style={{borderLeft: 'unset', borderTop: 'unset'}}>Услуга</td>
-                            <td rowSpan="2" style={{borderLeft: 'unset', borderTop: 'unset'}}
+                            <td width="25%" rowSpan="2" style={{borderLeft: 'unset', borderTop: 'unset'}}>Услуга</td>
+                            <td width="55%" rowSpan="2" style={{borderLeft: 'unset', borderTop: 'unset'}}
                                 className="notachild">Описание
                             </td>
-                            <td colSpan="4" style={{borderRight: 'unset', borderTop: 'unset'}}>Диаметр колеса</td>
-                        </tr>
-                        <tr>
-                            <td style={{textAlign: "center"}}>r15-17</td>
-                            <td style={{textAlign: "center"}} className="notachild">r18-20</td>
-                            <td style={{textAlign: "center"}}>r21-22</td>
-                            <td style={{borderRight: 'unset'}}>r23-32</td>
+                            <td width="20%" colSpan="5" style={{borderRight: 'unset', borderTop: 'unset'}}>Цена</td>
                         </tr>
                         </thead>
                         <tbody>
@@ -754,54 +882,36 @@ const PriceType = () => {
                             <td>химчистка колес, безопасный шиномонтаж, балансировка, виброконтроль и подгонка, снятие и
                                 установка, зачистка посадочных мест
                             </td>
-                            <td style={{textAlign: "center"}}>13<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>15<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>17<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{borderRight: 'unset'}}>20<span style={{marginRight: 5}}></span>000</td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][0]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset'}}>комплекс шиномонтажа</td>
                             <td>мойка, безопасный шиномонтаж на уникальном роботизированном станке, балансировка, снятие
                                 и установка, лазерная диагностика диска
                             </td>
-                            <td style={{textAlign: "center"}}>7<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>8<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>10<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{borderRight: 'unset'}}>12<span style={{marginRight: 5}}></span>000</td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][1]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset'}}>ARSZAG балансировка</td>
                             <td>химчистка колес, балансировка, виброконтроль и подгонка, снятие и установка, зачистка
                                 посадочных мест
                             </td>
-                            <td style={{textAlign: "center"}}>11<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>12<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>13<span style={{marginRight: 5}}></span>500</td>
-                            <td style={{borderRight: 'unset'}}>15<span style={{marginRight: 5}}></span>500</td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][2]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset'}}>балансировка колес</td>
                             <td>мойка, балансировка, снятие и установка, лазерная диагностика диска</td>
-                            <td style={{textAlign: "center"}}>4<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>4<span style={{marginRight: 5}}></span>700</td>
-                            <td style={{textAlign: "center"}}>5<span style={{marginRight: 5}}></span>500</td>
-                            <td style={{borderRight: 'unset'}}>6<span style={{marginRight: 5}}></span>500</td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][3]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset'}}>сборка колес</td>
-                            <td>мойка, балансировка, снятие и установка, лазерная диагностика диска</td>
-                            <td style={{textAlign: "center"}}>8<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>10<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>13<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{borderRight: 'unset'}}>16<span style={{marginRight: 5}}></span>000</td>
+                            <td>монтаж шины, балансировка, снятие и установка, лазерная диагностика диска</td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][4]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset'}}>разборка колес</td>
-                            <td>мойка, балансировка, снятие и установка, лазерная диагностика диска</td>
-                            <td style={{textAlign: "center"}}>7<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>9<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>12<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{borderRight: 'unset'}}>15<span style={{marginRight: 5}}></span>000</td>
+                            <td>мойка, демонтаж шины</td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][5]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset'}}>виброконтроль и увод шин</td>
@@ -809,60 +919,44 @@ const PriceType = () => {
                                 также виброконтроль. по возможности вносятся корректировки и даются рекомендации по
                                 эксплуатации
                             </td>
-                            <td style={{textAlign: "center"}}>4<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>4<span style={{marginRight: 5}}></span>700</td>
-                            <td style={{textAlign: "center"}}>5<span style={{marginRight: 5}}></span>500</td>
-                            <td style={{borderRight: 'unset'}}>6<span style={{marginRight: 5}}></span>500</td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][6]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset'}}>монтаж/демонтаж датчика давления</td>
                             <td>снятие и установка одного датчика давления на диск</td>
-                            <td colSpan="4" style={{borderRight: 'unset'}}>500</td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][7]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset'}}>устранение прокола</td>
                             <td>снятие - установка, мойка, балансировка колеса, установка заплатки или грибка</td>
-                            <td style={{textAlign: "center"}}>4<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>4<span style={{marginRight: 5}}></span>500</td>
-                            <td style={{textAlign: "center"}}>5<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{borderRight: 'unset'}}>5<span style={{marginRight: 5}}></span>500</td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][8]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset'}}>монтаж/демонтаж колес</td>
                             <td></td>
-                            <td style={{textAlign: "center"}}>2<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{textAlign: "center"}}>2<span style={{marginRight: 5}}></span>500</td>
-                            <td style={{textAlign: "center"}}>3<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{borderRight: 'unset'}}>3<span style={{marginRight: 5}}></span>500</td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][9]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset'}}>подготовка посадочных мест</td>
                             <td>зачистка ступицы от коррозии, нанесение специальной смазки</td>
-                            <td colSpan="4" style={{borderRight: 'unset'}}>1<span style={{marginRight: 5}}></span>700
-                            </td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][10]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset'}}>химчистка колес</td>
                             <td>удаление металлических вкраплений и битума с диска, чистка резины</td>
-                            <td colSpan="4" style={{borderRight: 'unset'}}>2<span style={{marginRight: 5}}></span>500
-                            </td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][11]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset', borderBottom: 'unset'}}>замена ниппеля</td>
                             <td style={{borderBottom: 'unset'}}>замена комплекта ниппелей на выбор из наличия</td>
-                            <td colSpan="4" style={{borderRight: 'unset', borderBottom: 'unset'}}>от 2<span
-                                style={{marginRight: 5}}></span>500
-                            </td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][12]}</td>
                         </tr>
                         <tr>
                             <td style={{borderLeft: 'unset'}}>хранение колес</td>
                             <td>мойка, консервация и бережное хранение колес на специально оборудованном складе 6
                                 месяцев
                             </td>
-                            <td style={{textAlign: "center"}}>6<span style={{marginRight: 5}}></span>500</td>
-                            <td style={{textAlign: "center"}}>7<span style={{marginRight: 5}}></span>500</td>
-                            <td style={{textAlign: "center"}}>8<span style={{marginRight: 5}}></span>000</td>
-                            <td style={{borderRight: 'unset'}}>9<span style={{marginRight: 5}}></span>000</td>
+                            <td style={{borderRight: 'unset'}}>{prices[priceTiresChange][13]}</td>
                         </tr>
                         </tbody>
                     </table>

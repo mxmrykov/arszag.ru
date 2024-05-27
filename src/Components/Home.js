@@ -112,11 +112,6 @@ export default function Home() {
                 </ul>
             </div>
             <div className="top__services_block">
-                <div className="services__card card bottom_price_card" onClick={() => {
-                    window.location.href = '/price';
-                }}>
-                    <h1 className="cards_h1">Прайс-лист</h1>
-                </div>
                 <div className="tires__card card bottom_contacts_card" onClick={() => {
                     window.location.href = '/contacts';
                 }}>
